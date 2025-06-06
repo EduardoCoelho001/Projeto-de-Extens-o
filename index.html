@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas & Corações - Adoção de Animais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+
+
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-paw text-3xl text-red-500"></i>
+                    <span class="text-2xl font-bold text-gray-800">Acapra</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-800 hover:text-red-500 font-medium">Início</a>
+                    <a href="#pets" class="text-gray-800 hover:text-red-500 font-medium">Animais Disponíveis</a>
+                    <a href="#about" class="text-gray-800 hover:text-red-500 font-medium">Sobre Nós</a>
+                    <a href="#success" class="text-gray-800 hover:text-red-500 font-medium">Finais Felizes</a>
+                    <a href="#contact" class="text-gray-800 hover:text-red-500 font-medium">Contato</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full font-medium transition">
+                        <i class="fas fa-user-plus mr-2"></i>Cadastre-se
+                    </button>
+                    <button class="md:hidden text-gray-800">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Encontre Seu Companheiro Peludo Perfeito</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Conectamos lares amorosos com animais que precisam. Veja nossos pets que esperam por uma família para sempre.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition">
+                    <i class="fas fa-search mr-2"></i>Ver Animais
+                </button>
+                <button class="bg-white hover:bg-gray-100 text-gray-800 px-8 py-3 rounded-full text-lg font-semibold transition">
+                    <i class="fas fa-question-circle mr-2"></i>Como Adotar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Pet -->
+    <section class="py-12 bg-gradient-to-r from-red-50 to-rose-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Conheça Nosso Animal em Destaque</h2>
+                    <h3 class="text-2xl font-semibold text-red-600 mb-2">Donatello - O Gigante Gentil</h3>
+                    <p class="text-gray-600 mb-4">Donatello é uma tartaruga de 50 anos que é muito sociavel e adora carinho. Foi deixada com a nossa equipe após o falecimento de seu dono.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Treinado para casa</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Adora morder crianças</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Vacinado</span>
+                    </div>
+                    <button class="adopt-btn text-white px-6 py-2 rounded-full font-semibold">
+                        <i class="fas fa-heart mr-2"></i>Adote o Donatello
+                    </button>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="Imagens/Tartaruga_01.1.jpg" 
+                         alt="Featured dog Max" 
+                         class="rounded-2xl shadow-xl h-96 w-full object-cover featured-pet">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animais Disponíveis Section -->
+    <section id="pets" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Pets Esperando por Inícios</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Cada um desses animais maravilhosos está em busca de uma família amorosa.</p>
+            </div>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button class="px-4 py-2 text-sm font-medium rounded-l-lg bg-red-500 text-white">
+                        Todos os Pets
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50">
+                        Doguinhos
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50">
+                        Gatos
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50">
+                        Animais Pequenos
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium rounded-r-lg bg-white text-gray-700 hover:bg-gray-50">
+                        Outros
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Pet Card 1 -->
+                <div class="pet-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="Imagens/Cachorro_12.jpg" 
+                             alt="Dog named Luna" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md">
+                            <i class="fas fa-heart heart-icon text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Luna</h3>
+                            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded-full text-xs">Fêmea</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">2-Anos Border collie</p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Amiga</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Energética</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Ama Brincar</span>
+                        </div>
+                        <button class="adopt-btn w-full text-white py-2 rounded-lg font-semibold">
+                            <i class="fas fa-paw mr-2"></i>Chame Luna
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Pet Card 2 -->
+                <div class="pet-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="Imagens/Gato_07.jpg" 
+                             alt="Cat named Whiskers" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md">
+                            <i class="fas fa-heart heart-icon text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Bolsonaro</h3>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Macho</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">1-Ano Bolsonaro</p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Curious</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Afetuoso</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Ama Brinquedos</span>
+                        </div>
+                        <button class="adopt-btn w-full text-white py-2 rounded-lg font-semibold">
+                            <i class="fas fa-paw mr-2"></i>Chame Bolsonaro
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Pet Card 3 -->
+                <div class="pet-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="Imagens/Papaguaio_01.jpg" 
+                             alt="Rabbit named Coco" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md">
+                            <i class="fas fa-heart heart-icon text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Paraguaio</h3>
+                            <span class="bg-rose-100 text-rose-800 px-2 py-1 rounded-full text-xs">Macho</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">10-Anos Paraguaio o Papagaio</p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Gentil</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Cantor</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Barulhento</span>
+                        </div>
+                        <button class="adopt-btn w-full text-white py-2 rounded-lg font-semibold">
+                            <i class="fas fa-paw mr-2"></i>Chame Paraguaio
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Pet Card 4 -->
+                <div class="pet-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="relative">
+                        <img src="Imagens/Porquinho_01.jpg" 
+                             alt="Dog named Rocky" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md">
+                            <i class="fas fa-heart heart-icon text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Rocky</h3>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Macho</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">4-Anos Porquinho Inglês</p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Gordinho</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Ciumento</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Necessita de Espaço</span>
+                        </div>
+                        <button class="adopt-btn w-full text-white py-2 rounded-lg font-semibold">
+                            <i class="fas fa-paw mr-2"></i>Chame o Rocky
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-white border-2 border-red-500 text-red-500 hover:bg-red-50 px-8 py-3 rounded-full text-lg font-semibold transition">
+                    <i class="fas fa-paw mr-2"></i>Vizualizar Animais Disponíveis
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adoption Process -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Nosso Processo de Adoção</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Tornamos o processo de adoção simples e transparente</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">1. Ver Animais</h3>
+                    <p class="text-gray-600">Veja nossos animais de estimação disponíveis on-line ou visite nosso abrigo para conhecê-los pessoalmente.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-file-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">2. Inscrição</h3>
+                    <p class="text-gray-600">Preencha nosso formulário de solicitação de adoção com seus dados e preferências.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">3. Conhecer o Pet</h3>
+                    <p class="text-gray-600">Agende uma reunião com o animal de estimação para garantir que ele seja uma boa opção para sua família.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-home text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">4. Início</h3>
+                    <p class="text-gray-600">Finalize a papelada e traga seu novo membro da família para casa!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Histórias de Sucesso -->
+    <section id="success" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Finais Felizes</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Leia histórias comoventes de pets que encontraram seu lar para sempre</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="success-story-card p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="Imagens/Persona_02.jpg" 
+                             alt="Sarah with her adopted dog" 
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Gabrielli Cassiane</h4>
+                            <p class="text-red-600">Adotou Luna em 2022</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Adotar a Luna foi a melhor decisão que já tomei. Ela trouxe muita alegria e risadas para a minha vida."</p>
+                    <div class="flex">
+                        <img src="Imagens/Cachorro_11.jpg" 
+                             alt="Luna doguinho" 
+                             class="w-24 h-24 rounded-lg object-cover mr-2">
+                        <img src="Imagens/Cachorro_12.jpg" 
+                             alt="Luna filhote" 
+                             class="w-24 h-24 rounded-lg object-cover">
+                    </div>
+                </div>
+                
+                <div class="success-story-card p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="Imagens/Persona_01.jpg" 
+                             alt="Mike with his adopted cat" 
+                             class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Bruno Back</h4>
+                            <p class="text-red-600">Adotou Oliver & Bolsonaro em 2023</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Oliver e Bolsonaro transformaram completamente a nossa casa. Eles eram tímidos no início, mas se tornaram gatos muitos carinhosos."</p>
+                    <div class="flex">
+                        <img src="Imagens/Gato_01.jpg" 
+                             alt="Oliver the cat" 
+                             class="w-24 h-24 rounded-lg object-cover mr-2">
+                        <img src="Imagens/Gato_07.jpg" 
+                             alt="Bolsonaro" 
+                             class="w-24 h-24 rounded-lg object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-white border-2 border-red-500 text-red-500 hover:bg-red-50 px-8 py-3 rounded-full text-lg font-semibold transition">
+                    <i class="fas fa-book-open mr-2"></i>Mais Histórias
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Nossa Missão</h2>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-6">ACAPRA Brusque: Protegendo Vidas Animais Desde 1999</h3>
+                    <p class="text-gray-600 mb-4">Em março de 1999, nasceu em Brusque a Associação Brusquense de Proteção aos Animais (ACAPRA), idealizada por um grupo de treze voluntários liderados por Dulcinea Coelho. Inicialmente ligada à ACAPRA de Florianópolis, a paixão e a necessidade de amparo aos animais em nossa cidade impulsionaram a criação de uma entidade independente e dedicada: a ACAPRA Brusque. Ao longo dos anos, inúmeros voluntários e diretorias, incluindo a marcante gestão de Moacir Giraldi, dedicaram seu tempo e esforços a esta causa vital.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-red-600">1,200+</div>
+                            <div class="text-gray-600">Pets Adotados</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-red-600">80+</div>
+                            <div class="text-gray-600">Voluntários</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-red-600">100%</div>
+                            <div class="text-gray-600">Sem Fins Lucrativos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="Imagens/Cachorro_06.jpg" 
+                             alt="Volunteers with dogs" 
+                             class="rounded-lg h-64 w-full object-cover">
+                        <img src="Imagens/Gato_04.jpg" 
+                             alt="Cat being cared for" 
+                             class="rounded-lg h-64 w-full object-cover">
+                        <img src="Imagens/Coelhos_01.jpg" 
+                             alt="Rabbit in shelter" 
+                             class="rounded-lg h-64 w-full object-cover">
+                        <img src="Imagens/Cachorros_02.jpg" 
+                             alt="Dog playing" 
+                             class="rounded-lg h-64 w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <br>
+   <br>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-red-500 to-rose-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Pronto para Mudar uma Vida?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Adotar um animal é uma experiência gratificante que muda sua vida e a deles para sempre.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="bg-white hover:bg-gray-100 text-red-600 px-8 py-3 rounded-full text-lg font-semibold transition">
+                    <i class="fas fa-paw mr-2"></i>Iniciar Processo de Adoção
+                </button>
+                <button class="border-2 border-white hover:bg-white hover:bg-opacity-10 px-8 py-3 rounded-full text-lg font-semibold transition">
+                    <i class="fas fa-phone-alt mr-2"></i>Entre em Contato
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato & Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-paw text-3xl text-red-500"></i>
+                        <span class="text-2xl font-bold">Acapra</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Conectando lares amorosos com animais necessitados desde 1999.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Início</a></li>
+                        <li><a href="#pets" class="text-gray-400 hover:text-white">Animais Disponíveis</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">Sobre Nós</a></li>
+                        <li><a href="#success" class="text-gray-400 hover:text-white">Histórias de Sucesso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Donate</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Informações de Contato</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-red-500"></i>
+                            <span>R. Alba Dias Cunha, 15 - Trindade, Florianópolis - SC, 88036-020</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-red-500"></i>
+                            <span>(47) 99991-1652</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-red-500"></i>
+                            <span>acapra@acaprabrusquesc.com.br</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-red-500"></i>
+                            <span>SEG-DOM: 9:00AM - 6:00PM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Boletim Informativo</h3>
+                    <p class="text-gray-400 mb-4">Assine para receber atualizações sobre novas chegadas, eventos e histórias de adoção.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-gray-800">
+                        <button class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Acapra Brusque. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Política de Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Termos de Serviço</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Perguntas Frequentes</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-red-500 text-white w-12 h-12 rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+<!-- Modal de Adoção (oculto por padrão) -->
+<div id="adoptionModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-2xl font-bold text-gray-800">Inicie Sua Jornada de Adoção</h3>
+            <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+
+        <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="firstName" class="block text-gray-700 mb-2">Nome</label>
+                    <input type="text" id="firstName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                </div>
+                <div>
+                    <label for="lastName" class="block text-gray-700 mb-2">Sobrenome</label>
+                    <input type="text" id="lastName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-gray-700 mb-2">E-mail</label>
+                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+            </div>
+
+            <div>
+                <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
+                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+            </div>
+
+            <div>
+                <label for="petInterest" class="block text-gray-700 mb-2">Pet de Interesse</label>
+                <select id="petInterest" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500">
+                    <option value="">Selecione seu Pet</option>
+                    <option value="donatello">Donatello</option>
+                    <option value="luna">Luna - Border Collie</option>
+                    <option value="bolsonaro">Bolsonaro - Gato</option>
+                    <option value="paraguio">Paraguaio - Papagaio</option>
+                    <option value="rocky">Rocky - Porquinho Inglês</option>
+                    <option value="other">Outros (Por favor, especifique)</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="experience" class="block text-gray-700 mb-2">Experiência Anterior com Pets</label>
+                <textarea id="experience" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"></textarea>
+            </div>
+
+            <div>
+                <label for="home" class="block text-gray-700 mb-2">Fale Sobre Seu Lar</label>
+                <textarea id="home" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"></textarea>
+            </div>
+
+            <div class="flex items-center">
+                <input type="checkbox" id="agree" class="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500">
+                <label for="agree" class="ml-2 text-gray-700">Eu concordo com os <a href="#" class="text-red-600 hover:underline">Termos de Adoção</a></label>
+            </div>
+
+            <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg font-semibold transition">
+                Enviar Formulário
+            </button>
+        </form>
+    </div>
+</div>
+
+    
+</body>
+</html>
+

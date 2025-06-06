@@ -1,0 +1,54 @@
+
+/* Custom CSS */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card {
+    transition: all 0.3s ease;
+}
+
+.adopt-btn {
+    background: linear-gradient(45deg, #f59e0b, #ef4444);
+    transition: all 0.3s ease;
+}
+
+.adopt-btn:hover {
+    transform: scale(1.05);
+}
+
+.heart-icon {
+    transition: all 0.3s ease;
+}
+
+.heart-icon:hover {
+    transform: scale(1.2);
+    color: #ef4444;
+}
+
+.success-story-card {
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+}
+
+/* Animation for featured pets */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.featured-pet {
+    animation: float 3s ease-in-out infinite;
+}
