@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Acapra</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+  <nav class="bg-white shadow p-4 flex justify-between">
+    <a href="index.html" class="font-bold text-red-500">🏠 Início</a>
+    <span class="text-gray-700">Área Administrativa</span>
+  </nav>
+
+  <section class="container mx-auto py-12">
+    <h1 class="text-3xl font-bold mb-6">Gerenciar Animais</h1>
+
+    <!-- Cadastrar Animal -->
+    <div class="bg-white p-6 rounded-xl shadow mb-8">
+      <h2 class="text-xl font-semibold mb-4">Cadastrar Novo Animal</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nome do Animal" class="w-full border p-2 rounded">
+        <input type="text" placeholder="Espécie/Raça" class="w-full border p-2 rounded">
+        <input type="number" placeholder="Idade" class="w-full border p-2 rounded">
+        <input type="file" class="w-full border p-2 rounded">
+        <button class="adopt-btn w-full text-white py-2 rounded-lg">Cadastrar</button>
+      </form>
+    </div>
+
+    <!-- Remover Animal -->
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-xl font-semibold mb-4">Remover Animal</h2>
+      <form class="space-y-4">
+        <select class="w-full border p-2 rounded">
+          <option>Selecione o Animal</option>
+          <option>Luna - Cachorro</option>
+          <option>Bolsonaro - Gato</option>
+        </select>
+        <button class="bg-red-500 text-white w-full py-2 rounded-lg">Remover</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
