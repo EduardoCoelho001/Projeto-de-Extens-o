@@ -2,23 +2,46 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Cadastro - Acapra</title>
+  <title>Login Administrativo - Acapra</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50">
-  <nav class="bg-white shadow p-4">
-    <a href="index.html" class="font-bold text-red-500">🏠 Início</a>
-  </nav>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <!-- Card de Login -->
+  <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold text-red-500">Área Administrativa</h1>
+      <p class="text-gray-600 text-sm mt-2">Acesso restrito</p>
+    </div>
 
-  <section class="container mx-auto py-12 max-w-lg">
-    <h1 class="text-3xl font-bold text-center mb-6">Cadastre-se</h1>
-    <form class="space-y-4 bg-white p-6 rounded-xl shadow">
-      <input type="text" placeholder="Nome" class="w-full border p-2 rounded">
-      <input type="email" placeholder="E-mail" class="w-full border p-2 rounded">
-      <input type="password" placeholder="Senha" class="w-full border p-2 rounded">
-      <button class="adopt-btn w-full text-white py-2 rounded-lg">Cadastrar</button>
+    <form action="dashboard.html" method="POST" class="space-y-6">
+      <!-- Usuário -->
+      <div>
+        <label for="usuario" class="block text-gray-700 font-medium mb-1">Usuário</label>
+        <input type="text" id="usuario" name="usuario" required
+          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-400 focus:outline-none">
+      </div>
+
+      <!-- Senha -->
+      <div>
+        <label for="senha" class="block text-gray-700 font-medium mb-1">Senha</label>
+        <input type="password" id="senha" name="senha" required
+          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-400 focus:outline-none">
+      </div>
+
+      <!-- Botão -->
+      <button type="submit"
+        class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition">
+        Entrar
+      </button>
     </form>
-  </section>
+
+    <!-- Link Voltar -->
+    <div class="mt-6 text-center">
+      <a href="index.html" class="text-sm text-gray-500 hover:text-red-500 transition">
+        ← Voltar ao site
+      </a>
+    </div>
+  </div>
 </body>
 </html>
