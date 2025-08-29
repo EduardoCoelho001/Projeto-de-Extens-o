@@ -69,12 +69,22 @@
   <!-- ---------------------------- -->
   <!-- Formulários de Adoção -->
   <!-- ---------------------------- -->
-  <div class="bg-white p-6 rounded-xl shadow">
-    <h2 class="text-2xl font-semibold mb-6">Formulários de Adoção</h2>
-    <div id="adoptionFormsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Cards de adoção serão adicionados dinamicamente via JS -->
-    </div>
+<!-- Container principal -->
+<div class="bg-white p-6 rounded-xl shadow">
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-2xl font-semibold">Formulários de Adoção</h2>
+
+    <!-- Filtro de status -->
+    <select id="statusFilter" class="border rounded-lg px-3 py-2">
+      <option value="all">Todos</option>
+      <option value="Não iniciado">Não iniciado</option>
+      <option value="Em andamento">Em andamento</option>
+      <option value="Concluído">Concluído</option>
+    </select>
   </div>
+
+  <div id="adoptionFormsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+</div>
   </section>
   <!-- admin.html -->
 <script type="module" src="JS/adoption-cards.js"></script>
