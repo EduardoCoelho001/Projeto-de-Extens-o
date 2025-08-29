@@ -6,94 +6,54 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/CSS/style.css">
 </head>
-<body class="bg-gray-50">
-  <nav class="bg-white shadow p-4 flex justify-between">
-    <a href="index.html" class="font-bold text-red-500">🏠 Início</a>
-    <span class="text-gray-700">Área Administrativa</span>
-  </nav>
+<body class="bg-gray-50 flex">
 
-  <section class="container mx-auto py-12">
-    <h1 class="text-3xl font-bold mb-6">Gerenciar Animais</h1>
+  <!-- Menu lateral -->
+  <aside class="w-64 bg-white shadow-md h-screen sticky top-0 p-6 flex flex-col">
+    <h1 class="text-2xl font-bold mb-8 text-red-500">Admin Acapra</h1>
+    <nav class="flex flex-col gap-4">
+      <button class="menu-btn p-2 rounded hover:bg-gray-100" data-target="addAnimalSection">Adicionar Animal</button>
+      <button class="menu-btn p-2 rounded hover:bg-gray-100" data-target="removeAnimalSection">Remover Animal</button>
+      <button class="menu-btn p-2 rounded hover:bg-gray-100" data-target="editAnimalSection">Editar Status</button>
+      <button class="menu-btn p-2 rounded hover:bg-gray-100" data-target="adoptionFormsSection">Formulários de Adoção</button>
+    </nav>
+  </aside>
 
-    <!-- Cadastrar Animal -->
-    <div class="bg-white p-6 rounded-xl shadow mb-8">
-      <h2 class="text-xl font-semibold mb-4">Cadastrar Novo Animal</h2>
-      <form id="addAnimalForm" class="space-y-4">
-        <input type="text" id="animalName" placeholder="Nome do Animal" class="w-full border p-2 rounded" required>
-        <input type="text" id="animalSpecies" placeholder="Espécie" class="w-full border p-2 rounded" required>
-        <input type="text" id="animalBreed" placeholder="Raça" class="w-full border p-2 rounded">
-        <input type="number" id="animalAge" placeholder="Idade (anos)" class="w-full border p-2 rounded" min="0" required>
-        <input type="number" id="animalWeight" placeholder="Peso (kg)" class="w-full border p-2 rounded" min="0" step="0.1">
-        
-        <select id="animalGender" class="w-full border p-2 rounded" required>
-          <option value="">Selecione o Sexo</option>
-          <option value="Macho">Macho</option>
-          <option value="Fêmea">Fêmea</option>
-          <option value="Não Informado">Não Informado</option>
-        </select>
-        
-        <input type="date" id="rescueDate" class="w-full border p-2 rounded" required>
-        
-        <textarea id="animalDescription" placeholder="Descrição do animal (comportamento, histórico, etc.)" class="w-full border p-2 rounded h-24"></textarea>
-        
-        <input type="file" id="animalImage" accept="image/*" class="w-full border p-2 rounded" required>
-        
-        <select id="animalStatus" class="w-full border p-2 rounded" required>
-          <option value="">Selecione o Status</option>
-          <option value="Disponível para Adoção">Disponível para Adoção</option>
-          <option value="Adotado">Adotado</option>
-          <option value="Em Tratamento">Em Tratamento</option>
-          <option value="Reservado">Reservado</option>
-        </select>
+  <!-- Conteúdo principal -->
+  <main class="flex-1 p-8 space-y-8">
+    
+    <!-- Adicionar Animal -->
+    <section id="addAnimalSection" class="admin-section">
+      <h2 class="text-3xl font-bold mb-4">Adicionar Animal</h2>
+      <div id="addAnimalContainer"></div> <!-- Form já existente será carregado aqui via JS -->
+    </section>
 
-        <button type="submit" id="addAnimalBtn" class="adopt-btn w-full text-white py-2 rounded-lg">Cadastrar Animal</button>
-        <p id="addAnimalMessage" class="text-center text-sm mt-2"></p>
-      </form>
-      <div id="uploadProgress" class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 hidden">
-        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 0%" id="progressBar"></div>
-      </div>
-    </div>
+    <!-- Remover Animal -->
+    <section id="removeAnimalSection" class="admin-section hidden">
+      <h2 class="text-3xl font-bold mb-4">Remover Animal</h2>
+      <div id="removeAnimalContainer"></div> <!-- Cards de remoção -->
+    </section>
 
-    <!-- Remover Animal (Manteremos como está, focando no cadastro agora) -->
-    <div class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-xl font-semibold mb-4">Remover Animal</h2>
-      <form id="removeAnimalForm" class="space-y-4">
-        <select class="w-full border p-2 rounded">
-          <option>Selecione o Animal</option>
-          <!-- Opções serão carregadas dinamicamente do Firestore futuramente -->
-        </select>
-        <button class="bg-red-500 text-white w-full py-2 rounded-lg">Remover</button>
-      </form>
-    </div>
-  </section>
-  <!-- ---------------------------- -->
-  <!-- Formulários de Adoção -->
-  <!-- ---------------------------- -->
-<!-- Container principal -->
-<div class="bg-white p-6 rounded-xl shadow">
-  <div class="flex items-center justify-between mb-6">
-    <h2 class="text-2xl font-semibold">Formulários de Adoção</h2>
+    <!-- Editar Status -->
+    <section id="editAnimalSection" class="admin-section hidden">
+      <h2 class="text-3xl font-bold mb-4">Editar Status dos Animais</h2>
+      <div id="editAnimalContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
 
-    <!-- Filtro de status -->
-    <select id="statusFilter" class="border rounded-lg px-3 py-2">
-      <option value="all">Todos</option>
-      <option value="Não iniciado">Não iniciado</option>
-      <option value="Em andamento">Em andamento</option>
-      <option value="Concluído">Concluído</option>
-    </select>
-  </div>
+    <!-- Formulários de Adoção -->
+    <section id="adoptionFormsSection" class="admin-section hidden">
+      <h2 class="text-3xl font-bold mb-4">Formulários de Adoção</h2>
+      <select id="statusFilter" class="border rounded-lg px-3 py-2 mb-4">
+        <option value="all">Todos</option>
+        <option value="Não iniciado">Não iniciado</option>
+        <option value="Em andamento">Em andamento</option>
+        <option value="Concluído">Concluído</option>
+      </select>
+      <div id="adoptionFormsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+    
+  </main>
 
-  <div id="adoptionFormsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-</div>
-  </section>
-  <!-- admin.html -->
-<script type="module" src="JS/adoption-cards.js"></script>
-  <!-- Importa configuração do Firebase (módulo) -->
-  <script type="module" src="JS/firebase-config.js"></script>
-  <!-- Importa o script de administração (novo módulo) -->
-  <script type="module" src="JS/admin-scrpit.js"></script>
-
-<div id="footer"></div>
-<script src="/JS/footer.js"></script>
+<script type="module" src="JS/admin-scrpit.js"></script>
 </body>
 </html>
