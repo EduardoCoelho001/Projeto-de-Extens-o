@@ -14,32 +14,35 @@
 
 .pet-card {
     transition: all 0.3s ease;
+   
 }
 
 .adopt-btn {
-    background: linear-gradient(45deg, #f59e0b, #ef4444);
+    background: linear-gradient(45deg,#6944ef44);
     transition: all 0.3s ease;
 }
 
 .adopt-btn:hover {
     transform: scale(1.05);
+
 }
 
 .heart-icon {
     transition: all 0.3s ease;
+    color: #f59e0b;
 }
 
 .heart-icon:hover {
     transform: scale(1.2);
-    color: #ef4444;
+    color: red;
 }
 
 .success-story-card {
-    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    background: linear-gradient(135deg,  #f59e0b, #6944ef44, #6944ef44);
 }
 
 .testimonial-card {
-    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    background: linear-gradient(135deg, #6944ef44, #f1f5f9);
 }
 
 /* Animation for featured pets */

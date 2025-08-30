@@ -27,7 +27,7 @@ if (loginForm) { // Verifica se o formulário existe antes de adicionar o listen
       // Login bem-sucedido
       const user = userCredential.user;
       messageDisplay.textContent = `Bem-vindo, ${user.email}! Redirecionando...`;
-      messageDisplay.style.color = 'green';
+      messageDisplay.style.color = 'Purple';
       // Redireciona o usuário para outra página aqui após o login
       window.location.href = 'admin.html';
       console.log('Usuário logado:', user);
@@ -57,7 +57,7 @@ if (loginForm) { // Verifica se o formulário existe antes de adicionar o listen
           break;
       }
       messageDisplay.textContent = friendlyErrorMessage;
-      messageDisplay.style.color = 'red';
+      messageDisplay.style.color = 'Purple';
     }
   });
 }

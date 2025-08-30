@@ -161,7 +161,7 @@ function openAdoptionFormModal(petId, petName) {
     e.preventDefault();
     const messageEl = modal.querySelector('#adoptionMessageModal');
     messageEl.textContent = "Enviando solicitação...";
-    messageEl.style.color = "gray";
+    messageEl.style.color = "Shades of Purple";
 
     try {
       const name = modal.querySelector('#adopterName').value;
@@ -171,7 +171,7 @@ function openAdoptionFormModal(petId, petName) {
 
       if (!name || !email || !phone) {
         messageEl.textContent = "⚠️ Preencha todos os campos obrigatórios.";
-        messageEl.style.color = "red";
+        messageEl.style.color = "Shades of Purple";
         return;
       }
 
@@ -193,7 +193,7 @@ function openAdoptionFormModal(petId, petName) {
     } catch (err) {
       console.error("Erro ao enviar formulário:", err);
       messageEl.textContent = `❌ Erro: ${err.message}`;
-      messageEl.style.color = "red";
+      messageEl.style.color = "Shades of Purple";
     }
   });
 }

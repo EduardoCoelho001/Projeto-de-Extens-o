@@ -47,7 +47,7 @@ if (adoptionForm) {
 
       if (!petId || !name || !email || !phone) {
         adoptionMessage.textContent = "⚠️ Preencha todos os campos obrigatórios.";
-        adoptionMessage.style.color = "red";
+        adoptionMessage.style.color = "Purple";
         return;
       }
 
@@ -63,13 +63,13 @@ if (adoptionForm) {
       });
 
       adoptionMessage.textContent = "✅ Solicitação enviada com sucesso!";
-      adoptionMessage.style.color = "green";
+      adoptionMessage.style.color = "Shades of Purple";
       adoptionForm.reset();
 
     } catch (err) {
       console.error("Erro ao enviar formulário:", err);
       adoptionMessage.textContent = `❌ Erro: ${err.message}`;
-      adoptionMessage.style.color = "red";
+      adoptionMessage.style.color = "Shades of Purple";
     }
   });
 }

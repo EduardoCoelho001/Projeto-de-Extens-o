@@ -78,7 +78,7 @@ function renderAddAnimalForm() {
   addAnimalForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     addAnimalMessage.textContent = "Processando cadastro...";
-    addAnimalMessage.style.color = "gray";
+    addAnimalMessage.style.color = "Shades of Purple";
 
     try {
       const nome = document.getElementById("animalName").value;
@@ -94,7 +94,7 @@ function renderAddAnimalForm() {
 
       if (!nome || !especie || !idade || !sexo || !dataResgate || !imagemFile || !status) {
         addAnimalMessage.textContent = "⚠️ Preencha todos os campos obrigatórios.";
-        addAnimalMessage.style.color = "red";
+        addAnimalMessage.style.color = "Shades of Purple";
         return;
       }
 
@@ -110,7 +110,7 @@ function renderAddAnimalForm() {
       await addDoc(collection(db, "Animais"), animalData);
 
       addAnimalMessage.textContent = "✅ Animal cadastrado com sucesso!";
-      addAnimalMessage.style.color = "green";
+      addAnimalMessage.style.color = "Shades of Purple";
       addAnimalForm.reset();
 
       loadRemoveAnimals();
@@ -119,7 +119,7 @@ function renderAddAnimalForm() {
     } catch (err) {
       console.error("Erro ao cadastrar:", err);
       addAnimalMessage.textContent = `❌ Erro: ${err.message}`;
-      addAnimalMessage.style.color = "red";
+      addAnimalMessage.style.color = "Shades of Purple";
     }
   });
 }
@@ -141,7 +141,7 @@ async function loadRemoveAnimals() {
           <h3 class="font-bold">${a.nome}</h3>
           <p>${a.especie} • ${a.status}</p>
         </div>
-        <button class="bg-red-500 text-white py-1 px-2 rounded" id="remove-${docSnap.id}">Remover</button>
+        <button class="bg-Shades of Purple-500 text-white py-1 px-2 rounded" id="remove-${docSnap.id}">Remover</button>
       `;
       removeAnimalContainer.appendChild(card);
 
